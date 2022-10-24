@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/traveling-typewriter" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2628910a6e.js" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body id="body-trabajos">
+    <header id="header-trabajos">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <h1 class="titulo-editorial">EDITORIAL</h1>
+    <div class="contenedor-editorial">
+
+        <div class="slider-frame-a">
+            <ul>
+                <li><img src="trabajos1.jpg" alt=""></li>
+                <li><img src="trabajos2.jpg" alt=""></li>
+                <li><img src="trabajos3.jpg" alt=""></li>
+                <li><img src="trabajos4.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div class="slider-frame-b">
+            <ul>
+                <li><img src="trabajos5.jpg" alt=""></li>
+                <li><img src="trabajos6.jpg" alt=""></li>
+                <li><img src="trabajos7.jpg" alt=""></li>
+                <li><img src="trabajos8.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="clientes" style="background-color: lightgrey ;">
+        <h2><center>Clientes</center></h2>
+        <div id="clientesjs" >
+        </div>
+
+    </div>
+
+<footer class="footer">
+        <div class="iconos">
+            <br>
+            <a href="https://www.instagram.com/alechuna/" target="_blank">
+            <i class="fa-brands fa-instagram" style="font-size: 20px;"></i> @alechuna ||</a>
+            <a href="https://www.facebook.com/alejandra.linares.102" target="_blank">
+            <i class="fa-brands fa-square-facebook" style="font-size: 20px;"></i> /Alejandra Linares ||</a>
+            <a href="https://wa.me/+541156341406?text=Hola, tengo una consulta" target="_blank"><i class="fa-brands fa-whatsapp" style="font-size: 20px; ;"></i> 1156341406</a>
+        </div>
+    </footer>
+
+    <script>
+        var contenido = document.getElementById('clientesjs');
+        fetch('https://randomuser.me/api/?results=100')
+        .then(res => res.json())
+        .then(res => clientes(res)
+        )
+
+        const clientes = (res) => {
+            contenido.innerHTML= `
+            <img src="${res.results[0].picture.large}" wih="100px" class="img-fluid rounded-circle" >
+            <p>${res.results[0].name.first}</p>
+            <p>Mail: ${res.results[0].email} </p>
+            <p>"Excelente trabajo, volvería a contratar"</p>
+            `}
+        
+
+    </script>
+
+</body>
+</html>

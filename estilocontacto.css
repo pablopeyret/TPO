@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    color: rgb(0, 0, 0);
+    font-family: 'Lemon/Milk light', sans-serif;
+}
+
+.content{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+.contact-wrapper{
+    background-color: rgb(255, 226, 64);
+}
+
+.contact-wrapper > * {
+    padding:1em;
+
+}
+
+
+.contact-form form p{
+    margin: 0;
+    padding: 1em;
+}
+
+
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea{
+    width: 100%;
+    padding: .7em;
+    border:none;
+    background: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    color: rgb(0, 0, 0);
+}
+
+.contact-form form button{
+    background-color: rgb(114, 102, 88);
+    border: 1px solid rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 1em;
+    color: rgb(255, 255, 255);
+}
+
+.contact-form form button:hover{
+    background-color: rgb(238, 127, 125);
+    border: 1px solid black;
+    text-transform: uppercase;
+    padding: 1em;
+    color: rgb(0, 0, 0);
+}
+
+.frase-contacto{
+    text-align: center;
+}
+
+.contact-info{
+    background-color: rgb(248, 248, 248);
+}
+
